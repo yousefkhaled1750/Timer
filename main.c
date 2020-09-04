@@ -7,8 +7,8 @@ void init(void){
 	SYSCTL->RCGCGPIO = 0x20;
 	while(SYSCTL->PRGPIO == 0);
 	
-	/*GPIOF->LOCK = 0x4C4F434B;
-	GPIOF->CR = 0x0E;*/
+	GPIOF->LOCK = 0x4C4F434B;
+	GPIOF->CR = 0x0E;
 	GPIOF->DEN = 0x0E;
 	GPIOF->DIR = 0x0E;
 	
